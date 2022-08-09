@@ -6,7 +6,7 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 12:42:56 by isaridas          #+#    #+#             */
-/*   Updated: 2022/08/08 21:00:27 by isaridas         ###   ########.fr       */
+/*   Updated: 2022/08/06 13:07:52 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strup(char *src)
+char	*ft_strdup(char *src)
 {
 	char	*news;
 	int		i;
 
 	i = 0;
-	news = malloc(ft_strlen(src) * sizeof(src));
+	news = malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (news == NULL)
 		return (0);
 	while (src[i])
